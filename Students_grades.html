@@ -3,13 +3,27 @@
     <script>
         const grades = [73, 91, 88, 56, 62, 84, 95, 96, 88, 92];
         
+        // ==> 1 <==
         function gradesRange(arr){
             let highest = Math.max(...arr);
             let lowest = Math.min(...arr);
             return highest - lowest;
         }
-        console.log(gradesRange(grades));
+        console.log("Range: " + gradesRange(grades));
         
+        // ==> 2 <==
+        function medianGrade(arr){
+            arr.sort(function(a, b){return a-b});
+            if(arr.length % 2 == 0)
+            {
+                return (arr[arr.length /2] + arr[arr.length /2 - 1]) / 2;
+            }
+            else{
+                return arr[(arr.length - 1) / 2];
+            }
+        }
+        console.log("Median: " + medianGrade(grades));
+
     </script>
     <head>                  
     </head>
