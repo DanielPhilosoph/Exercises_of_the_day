@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        // ==> 1 <==
+        function guessCity(capital, coastal, famous, ancient) {
+            if(capital && famous && ancient){
+                return "Jerusalem";
+            }
+            if(coastal && famous){
+                return "Tel Aviv";
+            }
+            if(coastal && ancient){
+                return "Acre";
+            }
+            if(ancient){
+                return "Katzrin";
+            }
+            if(coastal){
+                return "Zikim";
+            }
+            return "Musmus";
+        }
+        console.log(guessCity(false, true, true, false));
+    </script>
+    <head>        
+    </head>
+</html>
